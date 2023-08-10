@@ -1,0 +1,168 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "silver_coletas_suite",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "MasterKey_RetailerProduct"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "DateIns"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "Screenshot"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "Available"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "Unavailable"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "SuggestedPrice"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "FinalPrice"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "MasterKey_RetailerProduct"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "DateIns"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "DateIns",
+        "max_value": "2023-08-07",
+        "min_value": "2000-01-01",
+        "parse_strings_as_datetimes": false
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_compound_columns_to_be_unique",
+      "kwargs": {
+        "column_list": [
+          "MasterKey_RetailerProduct",
+          "DateIns"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Available"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Unavailable"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "Available",
+        "value_set": [
+          0,
+          1
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "Unavailable",
+        "value_set": [
+          0,
+          1
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_multicolumn_sum_to_equal",
+      "kwargs": {
+        "column_list": [
+          "Available",
+          "Unavailable"
+        ],
+        "sum_total": 1
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_in_set",
+      "kwargs": {
+        "column": "FinalPrice",
+        "value_set": [
+          0
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "FinalPrice",
+        "max_value": 100,
+        "min_value": 0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "FinalPrice",
+        "max_value": 10000,
+        "min_value": 0
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.17.8"
+  }
+}
